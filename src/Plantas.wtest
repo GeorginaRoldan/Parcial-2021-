@@ -1,0 +1,40 @@
+import Plantas.*
+import Parcelas.*
+
+test "menta"{
+	const menta1 = new Menta(altura = 1)
+	const menta2 = new Menta(altura = 0.3)
+	
+	assert.that(menta1.daSemillasNuevas())
+	assert.equals(menta1.espacioQueOcupa(),3)
+	assert.notThat(menta2.daSemillasNuevas())
+	assert.equals(menta2.espacioQueOcupa(),0.9)
+	
+}
+
+test "soja"{
+	const soja = new Soja(altura = 0.6,anioDeObtencionDeSemilla= 2009)
+	
+	assert.equals(soja.solQueTolera(),7)
+	assert.notThat(soja.daSemillasNuevas())
+	assert.equals(soja.espacioQueOcupa(),0.3)
+}
+
+test "quinoa"{
+	const quinoa1 = new Quinoa(anioDeObtencionDeSemilla = 2010,solQueTolera = 12)
+	const quinoa2 = new Quinoa(anioDeObtencionDeSemilla = 2001,solQueTolera = 9) 
+	
+	assert.that(quinoa1.daSemillasNuevas())
+	assert.that(quinoa2.daSemillasNuevas())
+	
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
